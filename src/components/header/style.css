@@ -1,12 +1,17 @@
 .container{
-    padding-left: 150%;
     display: flex;
     justify-content: center;
 }
-
-.navbar {
-    background-color: #f8f9fa;
+.sadik{
     padding: 10px;
+    color: rgb(0, 255, 106);
+    margin-right: 10%;
+}
+.navbar {
+    margin: auto;
+    display: flex;
+    list-style-type: none;
+    background-color: #f8f9fa;
 }
 
 .navbar-nav {
@@ -17,14 +22,24 @@
 }
 
 .nav-item {
+    margin-top: 37px;
     margin-right: 100px;
 }
 
 .nav-link {
-    color: #333;
+    padding: 4px;
+    color: black;
     text-decoration: none;
+    border: 1px solid rgb(177, 174, 174);
+    border-radius: 20px;
 }
 
 .nav-item.active .nav-link {
     font-weight: bold;
 }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }

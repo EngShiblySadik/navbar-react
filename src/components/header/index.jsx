@@ -1,57 +1,65 @@
-import React from 'react';
+import { useState } from 'react';
 import './style.css'
+import Route from '../route';
 
-class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeLink: 'home'
-        };
-    }
+function Navbar() {
 
-    handleClick(link) {
-        this.setState({ activeLink: link });
-    }
+    const [component, setComponent] = useState('')
+    console.log(component);
+    const handleClick = (e) => {
+        setComponent(e.target.innerText);
 
-    render() {
-        const { activeLink } = this.state;
+    };
 
-        return (
+
+
+    return (
+        <>
             <div className='container'>
-            <nav className="navbar">
-                <ul className="navbar-nav">
-                    <li className={`nav-item ${activeLink === 'home' ? 'active' : ''}`}>
-                        <a
-                            className="nav-link"
-                            href="../home/index.jsx"
-                            onClick={() => this.handleClick('home')}
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li className={`nav-item ${activeLink === 'about' ? 'active' : ''}`}>
-                        <a
-                            className="nav-link"
-                            href="../about/index.jsx"
-                            onClick={() => this.handleClick('about')}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li className={`nav-item ${activeLink === 'contact' ? 'active' : ''}`}>
-                        <a
-                            className="nav-link"
-                            href="../contact/index.jsx"
-                            onClick={() => this.handleClick('contact')}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <nav className="navbar">
+                    <h2 className='sadik'>SADIK</h2>
+                    <ul className="navbar-nav">
+                        <li className={`nav-item `}>
+                            <a
+                                className="nav-link"
+                                href="#"
+                                onClick={handleClick}
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li className={`nav-item`}>
+                            <a
+                                className="nav-link"
+                                href="#"
+                                onClick={handleClick}
+                            >
+                                About
+                            </a>
+                        </li>
+                        <li className={`nav-item`}>
+                            <a
+                                className="nav-link"
+                                href="#"
+                                onClick={handleClick}
+                            >
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
-        );
-    }
+            <Route component={component} />
+
+            <header>
+                <h1>Shibly Sadik</h1>
+                <p>Front-end Developer</p>
+            </header>
+        </>
+    )
+
+
 }
 
 export default Navbar;
