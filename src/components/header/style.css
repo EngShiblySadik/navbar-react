@@ -1,0 +1,30 @@
+.container{
+    padding-left: 150%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-right: 100px;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-item.active .nav-link {
+    font-weight: bold;
+}
